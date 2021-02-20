@@ -26,7 +26,17 @@ const giveaway = document.querySelector('.giveaway');
 const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
 
-let futureDate = new Date(2022, 11, 3, 11, 30, 0);
+// temp date always ten days away for demo so that countdown never ends
+let tempDate = new Date();
+let tempYear = tempDate.getFullYear();
+let tempMonth = tempDate.getMonth();
+let tempDay = tempDate.getDate();
+
+// fixed date
+// let futureDate = new Date(2020, 3, 24, 11, 0, 0);
+
+// for demo with temp date
+const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
 
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();
